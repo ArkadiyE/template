@@ -10,14 +10,16 @@ import argparse
 #import Do_Render.py
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
-parser = argparse.ArgumentParser()
 
-parser.add_argument("base_dir", type=str, default=Path.cwd())
-parser.add_argument("-syl", "--symlink", action="store_true")
-parser.add_argument("-t", "--template", action="store_true")
-args = parser.parse_args()
+
+
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("base_dir", type=str, default=Path.cwd())
+    parser.add_argument("-syl", "--symlink", action="store_true")
+    parser.add_argument("-t", "--template", action="store_true")
+    args = parser.parse_args()
     args.base_dir = Path(args.base_dir)
     args.base_dir.mkdir()
     ref = Path('ref')
