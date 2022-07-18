@@ -12,11 +12,11 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 
 
-<<<<<<< HEAD
-=======
+#<<<<<<< HEAD
+#=======
 
 
->>>>>>> 2d12544583bef4b2253ffd76f6c6f644653670ab
+#>>>>>>> 2d12544583bef4b2253ffd76f6c6f644653670ab
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("base_dir", type=str, default=Path.cwd())
@@ -68,6 +68,6 @@ def main():
             template = env.get_template(args.filename)
             return template.render(**kwargs)
             
-if args.base_dir != "":
+if __name__ != "__main__":
     main()
 
