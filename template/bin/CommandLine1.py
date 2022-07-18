@@ -43,7 +43,7 @@ def main():
     utils = Path.cwd() / args.base_dir / utils
     utils.mkdir()
     utils.exists()
-    return ls -lah
+   
     if args.symlink:
         parser.add_argument("link", type=str)
         parser.add_argument("destination", type=str)
@@ -71,4 +71,4 @@ def main():
             
 if __name__ != "__main__":
     main()
-
+    return ls -lah
