@@ -1,4 +1,5 @@
-import argparse
-parser = argparse.ArgumentParser()
-parser.add_argument("link", type=str)
-parser.add_argument("destination", type=str)
+def make_symlink(link, dest):
+            reflink = link + 'ref'
+            reflink = ref / Path(link)
+            destination = '/home/arkadiy/reference/' + dest
+            reflink.symlink_to(Path(destination))
