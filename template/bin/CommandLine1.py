@@ -19,7 +19,6 @@ def main():
     parser.add_argument("-syl", "--symlink", action="store_true")
     parser.add_argument("-t", "--template", action="store_true")
     args = parser.parse_args()
-<<<<<<< HEAD
     args.base_dir = Path(args.base_dir)
     args.base_dir.mkdir()
     ref = Path('ref')
@@ -40,10 +39,8 @@ def main():
     utils = Path.cwd() / args.base_dir / utils
     utils.mkdir()
     utils.exists()
-   
-=======
     make_directories(args.base_dir)
->>>>>>> a9ea9428596d140c4fd89ddc16acca3cf8ee3946
+
     if args.symlink:
         parser.add_argument("link", type=str)
         parser.add_argument("destination", type=str)
