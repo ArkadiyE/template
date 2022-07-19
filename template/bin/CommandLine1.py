@@ -6,8 +6,9 @@ from pathlib import PosixPath
 from pathlib import PurePosixPath
 import os
 import argparse
-#import Create_Symlink.py
-#import Do_Render.py
+from template.Make_Directories import make_directories
+from template.Creat_Symlink import make_symlink
+from template.Do_Render import do_render
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 
@@ -18,6 +19,7 @@ def main():
     parser.add_argument("-syl", "--symlink", action="store_true")
     parser.add_argument("-t", "--template", action="store_true")
     args = parser.parse_args()
+<<<<<<< HEAD
     args.base_dir = Path(args.base_dir)
     args.base_dir.mkdir()
     ref = Path('ref')
@@ -39,15 +41,14 @@ def main():
     utils.mkdir()
     utils.exists()
    
+=======
+    make_directories(args.base_dir)
+>>>>>>> a9ea9428596d140c4fd89ddc16acca3cf8ee3946
     if args.symlink:
         parser.add_argument("link", type=str)
         parser.add_argument("destination", type=str)
         args = parser.parse_args()
-        def make_symlink():
-            reflink = args.link + 'ref'
-            reflink = ref / Path(args.link)
-            dest = '/home/arkadiy/reference/' + args.destination
-            reflink.symlink_to(Path(dest))
+        make_symlink(args.link, args.destination)
     if args.template:
         parser.add_argument("filename", type=str)
         parser.add_argument("PATTERN", type=str)
@@ -57,12 +58,7 @@ def main():
         args = parser.parse_args()
         kwargs = vars(args)
         kwargs = args.PATTERN, args.RUNID, args.NPROC, args.base_dir
-        def do_render():
-            env = Environment(loader=FileSystemLoader("."),autoescape=select_autoescape())
-            path = Path(args.filename)
-            path.exists()
-            template = env.get_template(args.filename)
-            return template.render(**kwargs)
-            
+        do_render(args.filename, **kwargs)
+        
 if __name__ == "__main__":
     main()
