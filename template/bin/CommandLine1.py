@@ -36,8 +36,8 @@ def main():
         args = parser.parse_args()
         kwargs = vars(args)
         kwargs = args.PATTERN, args.RUNID, args.NPROC, args.base_dir
-        do_render(args.filename, **kwargs):
-          
+        do_render(args.filename, **kwargs)
+        
 if __name__ == "__main__":
     main()
 
