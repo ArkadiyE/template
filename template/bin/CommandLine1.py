@@ -6,7 +6,7 @@ from pathlib import PosixPath
 from pathlib import PurePosixPath
 import os
 import argparse
-from template.Make_Directories import make_directories
+from Make_Directories import make_directories
 from template.Creat_Symlink import make_symlink
 from template.Do_Render import do_render
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -19,26 +19,6 @@ def main():
     parser.add_argument("-syl", "--symlink", action="store_true")
     parser.add_argument("-t", "--template", action="store_true")
     args = parser.parse_args()
-    args.base_dir = Path(args.base_dir)
-    args.base_dir.mkdir()
-    ref = Path('ref')
-    ref = Path.cwd() / args.base_dir / ref
-    ref.mkdir()
-    data = Path('data')
-    data = Path.cwd() / args.base_dir / data
-    data.mkdir()
-    notebook = Path('notebook')
-    notebook = Path.cwd() / args.base_dir / notebook
-    notebook.mkdir()
-    notebook.exists()
-    results = Path('results')
-    results = Path.cwd() / args.base_dir / results
-    results.mkdir()
-    results.exists()
-    utils = Path('utils')
-    utils = Path.cwd() / args.base_dir / utils
-    utils.mkdir()
-    utils.exists()
     make_directories(args.base_dir)
 
     if args.symlink:
