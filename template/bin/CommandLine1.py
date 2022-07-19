@@ -69,5 +69,6 @@ def main():
             template = env.get_template(args.filename)
             return template.render(**kwargs)
             
-if __name__ != "__main__":
+if __name__ == "__main__":
+    print("the function works")
     main()
