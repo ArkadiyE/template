@@ -6,8 +6,8 @@ from pathlib import PosixPath
 from pathlib import PurePosixPath
 import os
 import argparse
-from Make_Directories import make_directories
-from template.Creat_Symlink import make_symlink
+from template.Make_Directories import make_directories
+from template.Create_Symlink import make_symlink
 from template.Do_Render import do_render
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
