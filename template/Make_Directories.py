@@ -1,5 +1,5 @@
 def make_directories(base_dir):
-  base_dir = Path(base_dir)
+    base_dir = Path(base_dir)
     base_dir.mkdir()
     ref = Path('ref')
     ref = Path.cwd() / base_dir / ref
