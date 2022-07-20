@@ -6,9 +6,6 @@ from pathlib import PosixPath
 from pathlib import PurePosixPath
 import os
 import argparse
-from template.Make_Directories import make_directories
-from template.Create_Symlink import make_symlink
-from template.Do_Render import do_render
 from template.functions.make_directories import make_directories
 from template.functions.create_symlink import make_symlink
 from template.functions.do_render import do_render
