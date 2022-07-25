@@ -5,7 +5,7 @@ setup(
    author="Arkadiy Epshtein",
    author_email="arkadiy.epshtein@stonybrook.edu",
    #package_dir={"template":"template.py"},
-   package_data={"template": "template/template.ipynb"},
+   #package_data={"template": "template/template.ipynb"},
    packages=find_packages(where="template"),
    scripts=["bin/CommandLine1"],
    url="http://github.com/ArkadiyE/template",
