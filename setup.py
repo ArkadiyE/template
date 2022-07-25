@@ -11,7 +11,7 @@ setup(
    url="http://github.com/ArkadiyE/template",
    license= "LISENCE.txt",
    description='A program that creates notebook templates.',
-   long_description=open('README.txt').read(),
+   long_description=open('README.md').read(),
    install_requires=[
        "jinja2",
        "pytest",
