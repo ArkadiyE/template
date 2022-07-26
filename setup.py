@@ -6,7 +6,8 @@ setup(
    author_email="arkadiy.epshtein@stonybrook.edu",
    packages=find_packages(where="template"),
    package_dir={"template":"template"},
-   #package_data=get_package_data(),
+   package_data={"template":["bin/*.py"]},
+   data_file={("functions",["functions/make_directories.py", "functions/create_symlink.py", "functions/do_render.py"])}
    scripts=["bin/CommandLine1"],
    url="http://github.com/ArkadiyE/template",
    license= "LISENCE.txt",
