@@ -5,12 +5,8 @@ setup(
    author="Arkadiy Epshtein",
    author_email="arkadiy.epshtein@stonybrook.edu",
    packages=find_packages(where="template"),
-<<<<<<< HEAD
-    
-=======
    package_dir={"template":"template"},
    package_data=get_package_data(),
->>>>>>> db73d539f7d399aec826e6940d786a558413e6e7
    scripts=["bin/CommandLine1"],
    url="http://github.com/ArkadiyE/template",
    license= "LISENCE.txt",
