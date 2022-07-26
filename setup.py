@@ -6,7 +6,7 @@ setup(
    author_email="arkadiy.epshtein@stonybrook.edu",
    #package_dir={"template":"template.py"},
    #package_data={"template": "template/template.ipynb"},
-   packages=find_packages(),
+   packages=find_packages(where="template"),
    scripts=["bin/CommandLine1"],
    url="http://github.com/ArkadiyE/template",
    license= "LISENCE.txt",
