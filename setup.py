@@ -6,7 +6,7 @@ setup(
    author_email="arkadiy.epshtein@stonybrook.edu",
    packages=find_packages(where="template"),
    package_dir={"template":"template"},
-   package_data=get_package_data(),
+   #package_data=get_package_data(),
    scripts=["bin/CommandLine1"],
    url="http://github.com/ArkadiyE/template",
    license= "LISENCE.txt",
