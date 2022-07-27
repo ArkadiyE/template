@@ -7,7 +7,7 @@ setup(
    packages=find_packages(where="template"),
    package_dir={"template":"template"},
    package_data={"template":["bin/*.py"]},
-   data_files={[("functions",["functions/*.py"])]},
+   data_files=[("functions",["functions/*.py"])],
    scripts=["bin/CommandLine1"],
    url="http://github.com/ArkadiyE/template",
    license= "LISENCE.txt",
