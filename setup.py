@@ -7,8 +7,8 @@ setup(
    packages=find_packages(where="template"),
    package_dir={"template":"template"},
    package_data={"template":["bin/*.py"]},
-   data_file={("functions",["functions/make_directories.py", "functions/create_symlink.py", "functions/do_render.py"])}
-   #scripts=["bin/CommandLine1"],
+   data_file={("functions",["functions/make_directories.py", "functions/create_symlink.py", "functions/do_render.py"])},
+   scripts=["bin/CommandLine1"],
    url="http://github.com/ArkadiyE/template",
    license= "LISENCE.txt",
    description='A program that creates notebook templates.',
