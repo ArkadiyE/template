@@ -8,7 +8,7 @@ setup(
    package_dir={"template":"template"},
    package_data={"template":["functions/*.ipynb"]},
    data_files=[("functions",["functions/*.py"]), ("bin", ["bin/CommandLine1.py"])],
-   scripts=["bin/CommandLine1.py"],
+   scripts=["template/bin/CommandLine1.py"],
    url="http://github.com/ArkadiyE/template",
    license= "LISENCE.txt",
    description='A program that creates notebook templates.',
