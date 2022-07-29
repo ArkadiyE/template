@@ -1,3 +1,4 @@
+from pathlib import Path
 def do_render(filename, **kwargs):
             env = Environment(loader=FileSystemLoader("."),autoescape=select_autoescape())
             path = Path(filename)
