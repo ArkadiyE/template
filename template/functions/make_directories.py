@@ -1,3 +1,4 @@
+from pathlib import Path
 def make_directories(base_dir):
     base_dir = Path(base_dir)
     base_dir.mkdir()
