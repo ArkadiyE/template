@@ -33,7 +33,7 @@ def main():
         parser.add_argument("NPROC", type=str)
         parser.add_argument("base_dir", type=str)
         args = parser.parse_args()
-        kwargs = vars(args)
+        #kwargs = vars(args)
         kwargs = args.PATTERN, args.RUNID, args.NPROC, args.base_dir
         do_render(args.filename, **kwargs)
         
