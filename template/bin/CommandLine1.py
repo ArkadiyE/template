@@ -22,6 +22,10 @@ def main():
     print(args)
     make_directories(args.set_dir)
 
+    
+        
+if __name__ == "__main__":
+    main()
     if args.symlink:
         
         parser.add_argument("link", type=str)
@@ -30,7 +34,7 @@ def main():
         print(args)
         make_symlink(args.link, args.destination)
         
-    if args.template:
+    elif args.template:
         
         parser.add_argument("filename", type=str)
         parser.add_argument("PATTERN", type=str)
@@ -43,6 +47,3 @@ def main():
         print(kwargs)
         #kwargs = args.PATTERN, args.RUNID, args.NPROC, args.base_dir
         do_render(args.filename, **kwargs)
-        
-if __name__ == "__main__":
-    main()
