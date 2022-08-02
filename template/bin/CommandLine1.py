@@ -19,16 +19,17 @@ def main():
     parser.add_argument("-syl", "--symlink", action="store_true")
     parser.add_argument("-t", "--template", action="store_true")
     args = parser.parse_args()
-    print(args)
+    
     make_directories(args.set_dir)
-
+    print(args)
     if args.symlink:
         
         parser.add_argument("link", type=str)
         parser.add_argument("destination", type=str)
         args = parser.parse_args()
-        print(args)
+        
         make_symlink(args.link, args.destination)
+        print(args)
     if args.template:
         
         parser.add_argument("filename", type=str)
@@ -38,10 +39,10 @@ def main():
         parser.add_argument("base_dir", type=str)
         args = parser.parse_args()
         kwargs = vars(args)
-        print(args)
-        print(kwargs)
+        
         #kwargs = args.PATTERN, args.RUNID, args.NPROC, args.base_dir
         do_render(args.filename, **kwargs)
-        
+        print(args)
+        print(kwargs)
 if __name__ == "__main__":
     main()
