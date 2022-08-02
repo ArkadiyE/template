@@ -23,7 +23,6 @@ def main():
     make_directories(args.set_dir)
 
     if args.symlink:
-        
         parser.add_argument("link", type=str)
         parser.add_argument("destination", type=str)
         args = parser.parse_args()
