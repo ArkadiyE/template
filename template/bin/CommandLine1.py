@@ -21,7 +21,7 @@ def main():
     parser.add_argument("--dst", "--destination", type=str) 
     parser.add_argument("--fn", "--filename", type=str)
     parser.add_argument("--PT", "--PATTERN", type=str)
-    parser.add_argument("--RID", "--RUNID", type=str, default="")
+    parser.add_argument("--RID", "--RUNID", type=str, default=None)
     parser.add_argument("--NPR", "--NPROC", type=str)
     parser.add_argument("--bd", "--base_dir", type=str)
     args = parser.parse_args()
