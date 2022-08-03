@@ -18,8 +18,8 @@ def main():
     parser.add_argument("-syl", "--symlink", action="store_true")
     parser.add_argument("-t", "--template", action="store_true")
     
-    print(args)
-    make_directories(args.set_dir)
+    
+    
 
     if args.symlink:
         
@@ -43,5 +43,6 @@ def main():
         #kwargs = args.PATTERN, args.RUNID, args.NPROC, args.base_dir
         do_render(args.filename, **kwargs)
     args = parser.parse_args()
+    make_directories(args.set_dir)
 if __name__ == "__main__":
     main()
