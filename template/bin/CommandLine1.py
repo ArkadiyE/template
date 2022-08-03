@@ -17,7 +17,7 @@ def main():
     parser.add_argument("set_dir", type=str, default=Path.cwd())
     parser.add_argument("-syl", "--symlink", action="store_true")
     parser.add_argument("-t", "--template", action="store_true")
-    #args = parser.parse_args()
+    args = parser.parse_args()
     print(args)
     make_directories(args.set_dir)
 
