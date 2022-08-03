@@ -1,4 +1,6 @@
 from pathlib import Path
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 def do_render(filename, **kwargs):
             env = Environment(loader=FileSystemLoader("."),autoescape=select_autoescape())
             path = Path(filename)

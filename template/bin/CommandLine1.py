@@ -4,7 +4,6 @@ from pathlib import Path
 from pathlib import PurePath
 from pathlib import PosixPath
 from pathlib import PurePosixPath
-import os
 import argparse
 from template.functions.make_directories import make_directories
 from template.functions.create_symlink import make_symlink
