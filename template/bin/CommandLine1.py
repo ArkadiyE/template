@@ -22,6 +22,7 @@ def main():
     make_directories(args.set_dir)
 
     if args.symlink:
+        parser = argparse.ArgumentParser()
         parser.add_argument("link", type=str)
         parser.add_argument("destination", type=str)
         args = parser.parse_args()
@@ -29,7 +30,7 @@ def main():
         make_symlink(args.link, args.destination)
         
     if args.template:
-        
+        parser = argparse.ArgumentParser()
         parser.add_argument("filename", type=str)
         parser.add_argument("PATTERN", type=str)
         parser.add_argument("RUNID", type=str, default="")
