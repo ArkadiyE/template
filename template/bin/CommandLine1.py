@@ -17,27 +17,24 @@ def main():
     parser.add_argument("set_dir", type=str, default=Path.cwd())
     parser.add_argument("-syl", "--symlink", action="store_true")
     parser.add_argument("-t", "--template", action="store_true")
+    parser.add_argument("--lnk", "--link", type=str)
+    parser.add_argument("--dst", "--destination", type=str) 
+    parser.add_argument("--fn", "--filename", type=str)
+    parser.add_argument("--PT", "--PATTERN", type=str)
+    parser.add_argument("--RID", "--RUNID", type=str, default="")
+    parser.add_argument("--NPR", "--NPROC", type=str)
+    parser.add_argument("--bd", "--base_dir", type=str)
     args = parser.parse_args()
+    kwargs = vars(args)
     print(args)
     make_directories(args.set_dir)
 
     if args.symlink:
-        
-        parser.add_argument("link", type=str)
-        parser.add_argument("destination", type=str)
-        args = parser.parse_args()
         print(args)
         make_symlink(args.link, args.destination)
         
     if args.template:
         
-        parser.add_argument("filename", type=str)
-        parser.add_argument("PATTERN", type=str)
-        parser.add_argument("RUNID", type=str, default="")
-        parser.add_argument("NPROC", type=str)
-        parser.add_argument("base_dir", type=str)
-        args = parser.parse_args()
-        kwargs = vars(args)
         print(args)
         print(kwargs)
         #kwargs = args.PATTERN, args.RUNID, args.NPROC, args.base_dir
