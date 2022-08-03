@@ -18,7 +18,7 @@ def main():
     parser.add_argument("-syl", "--symlink", action="store_true")
     parser.add_argument("-t", "--template", action="store_true")
     
-    make_directories(args.set_dir)
+    
 
     if args.symlink:
         parser.add_argument("link", type=str)
@@ -43,5 +43,6 @@ def main():
     else:
         args = parser.parse_args()
         print(args)
+        make_directories(args.set_dir)
 if __name__ == "__main__":
     main()
