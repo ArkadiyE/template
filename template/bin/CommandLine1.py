@@ -26,7 +26,6 @@ def main():
     parser.add_argument("-bd", "--base_dir", type=str)
     args = parser.parse_args()
     kwargs = vars(args)
-    kwargs.pop(args.filename)
     print(args)
     make_directories(args.set_dir)
 
