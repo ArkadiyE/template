@@ -25,7 +25,7 @@ def main():
         parser = argparse.ArgumentParser()
         parser.add_argument("link", type=str)
         parser.add_argument("destination", type=str)
-        #args = parser.parse_args()
+        args = parser.parse_args()
         print(args)
         make_symlink(args.link, args.destination)
         
@@ -36,7 +36,7 @@ def main():
         parser.add_argument("RUNID", type=str, default="")
         parser.add_argument("NPROC", type=str)
         parser.add_argument("base_dir", type=str)
-        #args = parser.parse_args()
+        args = parser.parse_args()
         #kwargs = vars(args)
         print(args)
         print(kwargs)
