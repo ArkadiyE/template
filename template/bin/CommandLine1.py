@@ -42,6 +42,6 @@ def main():
         print(kwargs)
         kwargs = args.PATTERN, args.RUNID, args.NPROC, args.base_dir
         do_render(args.filename, **kwargs)
-        
+    args = parser.parse_args()  
 if __name__ == "__main__":
     main()
