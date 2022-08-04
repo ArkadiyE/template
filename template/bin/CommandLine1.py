@@ -25,7 +25,8 @@ def main():
     parser.add_argument("-NPR", "--NPROC", type=str)
     parser.add_argument("-bd", "--base_dir", type=str)
     args = parser.parse_args()
-    kwargs = vars(args)
+    kwargs = {'PATTERN': args.PATTERN, 'RUNID': args.RUNID, 'NPROC': args.NPROC, 'base_dir': args.base_dir}
+    print(kwargs)
     print(args)
     make_directories(args.set_dir)
 
@@ -37,6 +38,7 @@ def main():
         
         print(args)
         print(kwargs)
+        
         #kwargs = args.PATTERN, args.RUNID, args.NPROC, args.base_dir
         do_render(args.filename, **kwargs)
         
