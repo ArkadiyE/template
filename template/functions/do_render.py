@@ -6,7 +6,10 @@ def do_render(filename, **kwargs):
             path = Path(filename)
             path.exists()
             template = env.get_template(filename)
-            return template.render(**kwargs)
+            with open(filename, 'wt') as output_file:
+                output_file.write(template.render(**kwargs))
+
+            #return template.render(**kwargs)
             #stat = template.render(**kwargs)
             #rendered_template = Path('rendered_template')
             #rendered_template = notebook / stat.ipynb
