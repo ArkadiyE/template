@@ -13,7 +13,6 @@ def main():
     parser.add_argument("-syl", "--symlink", action="store_true")
     parser.add_argument("-t", "--template", action="store_true")
     parser.add_argument("-lnk", "--link", type=str)
-    parser.add_argument("-rflnk", "--reference_link", type=str)
     parser.add_argument("-dst", "--destination", type=str) 
     parser.add_argument("-fn", "--filename", type=str)
     parser.add_argument("-PT", "--PATTERN", type=str)
@@ -28,7 +27,7 @@ def main():
 
     if args.symlink:
         print(args)
-        make_symlink(args.link, args.reference_link, args.destination)
+        make_symlink(args.link, args.set_dir, args.destination)
         
     if args.template:
         
