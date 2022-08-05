@@ -2,8 +2,8 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 def do_render(filename, **kwargs):
             env = Environment(loader=FileSystemLoader("."),autoescape=select_autoescape())
-            path = Path(filename)
             template = env.get_template(filename)
+            path = Path(filename)
             with open(filename, 'wt') as output_file:
                 output_file.write(template.render(**kwargs))
 
