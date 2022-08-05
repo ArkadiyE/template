@@ -4,7 +4,8 @@ def do_render(filename, **kwargs):
             env = Environment(loader=FileSystemLoader("."),autoescape=select_autoescape())
             template = env.get_template(filename)
             path = Path(filename)
-            with open(filename, 'wt') as output_file:
+            path.with_suffix('.ipynb')
+            with open(path, 'wt') as output_file:
                 output_file.write(template.render(**kwargs))
 
             #return template.render(**kwargs)
