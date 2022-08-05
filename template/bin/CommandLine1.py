@@ -1,15 +1,10 @@
 #!/usr/bin/env python
 
 from pathlib import Path
-from pathlib import PurePath
-from pathlib import PosixPath
-from pathlib import PurePosixPath
 import argparse
 from template.functions.make_directories import make_directories
 from template.functions.create_symlink import make_symlink
 from template.functions.do_render import do_render
-from jinja2 import Environment, FileSystemLoader, select_autoescape
-env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 
 
 def main():
