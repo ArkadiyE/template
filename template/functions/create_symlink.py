@@ -1,7 +1,7 @@
 from pathlib import Path
 
-def make_symlink(link, dest):
-            reflink = link + 'ref'
+def make_symlink(link, reflink, dest):
+            
             reflink = ref / Path(link)
             destination = '/home/arkadiy/reference/' + dest
             print(destination.exists())
